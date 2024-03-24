@@ -1,0 +1,29 @@
+<!-- Создай страницу для вывода информации пользователя -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты формы</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__text">
+          <h1>Расчитай энергоэффективность своего дома!</h1>
+          <p>Реши проблему излишнего электропотребления самостоятельно!</p>
+        </div>
+    </header>
+    <main>
+    {% block content %}
+    <h1>Спасибо за заполнение формы!</h1>
+    <p>Ваше имя: {{ name }}</p>
+    <p>Ваша электронная почта: {{ email }}</p>
+    <p>Ваш адрес: {{ address }}</p>
+    <p>Ваша дата: {{ date }}</p>
+    <h3>Ожидайте нашего специалиста &#128513;</h3>
+    {% endblock %}
+    </main>
+</body>
+</html>
